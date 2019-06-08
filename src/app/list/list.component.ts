@@ -16,7 +16,6 @@ private data:any;
   }
 
   toModify(id:any){
-    console.log("id->",id);
     this.router.navigate(['update',id])
   }
 

@@ -1,64 +1,38 @@
+<!-- For modify the user data  -->
 <div class="modify-container">
-  <form  [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name</label>
-      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
       <input type="text" id="name" class="form-control" formControlName="name" [ngClass]="getClass('name')">
-
-      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
       <input type="email" id="email" class="form-control" formControlName="email" [ngClass]="getClass('email')">
-
-      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-    
-
-      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
     </div>
     <div class="form-group">
       <label for="website">Website</label>
-      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
       <input type="text" id="website" class="form-control" formControlName="website" [ngClass]="getClass('website')">
-
-      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
     </div>
     <div class="form-group">
       <label for="age">Age</label>
-      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
-      <input type="number" id="age" class="form-control" formControlName="age" [ngClass]="getClass('age')">
-
-      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-    </div>
+      <input type="number" id="age" class="form-control" formControlName="age" [ngClass]="getClass('age')"></div>
     <div class="form-group">
       <label for="gender">Gender</label>
-      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
-      <!-- <input type="text" id="gender" formControlName="gender"> -->
 <select id="gender" formControlName="gender" class="form-control" [ngClass]="getClass('gender')">
-  <option value="m">Male</option>
-  <option value="f">Female</option>
-  <option value="o">Other</option>
-</select>
-      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+        <option value="o">Other</option>
+      </select>
     </div>
     <div class="form-group">
-        <label for="address">Address</label>
-        <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
-        <textarea id="address" formControlName="address" class="form-control" [ngClass]="getClass('address')"></textarea>
-  
-        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-      </div>
-      <div class="form-group">
-          <label for="dob">DOB</label>
-          <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
-          <input type="date" id="dob" formControlName="dob" class="form-control" [ngClass]="getClass('dob')">
-    
-          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-        </div>
-        Form status: {{profileForm.status}}
-
+      <label for="address">Address</label>
+      <textarea id="address" formControlName="address" class="form-control" [ngClass]="getClass('address')"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="dob">DOB</label>
+      <input type="date" id="dob" formControlName="dob" class="form-control" [ngClass]="getClass('dob')">
+    </div>
     <button type="submit" [disabled]="!profileForm.valid" class="btn btn-primary">Submit</button>
-    
+
   </form>
 </div>

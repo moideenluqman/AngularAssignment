@@ -1,10 +1,10 @@
+<!-- For listing user details -->
 <table class="table table-striped" *ngIf="data && data.length">
   <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Email</th>
       <th>Age</th>
-      <!-- <th>Gender</th> -->
       <th>DOB</th>
       <th></th>
     </tr>
@@ -20,9 +20,6 @@
       <td>
         {{item.age}}
       </td>
-      <!-- <td>
-        {{item.gender=='f'?''}}
-      </td> -->
       <td>
         {{item.dob}}
       </td>

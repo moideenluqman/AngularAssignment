@@ -74,20 +74,11 @@ export class ModifyComponent implements OnInit {
   }
 
   updateFormValues(item: any) {
-    // this.profileForm.patchValue({
-    //   name: 'Nancy test',
-    //   email: "test@gmail.com",
-    //   website: "http://www.test.com",
-    //   age: "23",
-    //   gender: "m",
-    //   address: "test address",
-    //   dob: "1993-12-16"
-
-    // });
     this.profileForm.patchValue(item)
   }
 
   getClass(name: string) {
+    //validate each component
     if (this.profileForm.controls[name].touched) {
       if (this.profileForm.controls[name].valid) {
         return 'is-valid';
