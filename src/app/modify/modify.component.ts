@@ -43,62 +43,7 @@ export class ModifyComponent implements OnInit {
   isModify: boolean = false;
   updateIndex: any = null;
 
-  formFeilds=[
-    {
-      label:"Name",
-      id:"name",
-      model:"name",
-      type:"text"
-    },
-    {
-      label:"Email",
-      id:"email",
-      model:"email",
-      type:"email"
-    },
-    {
-      label:"Website",
-      id:"website",
-      model:"website",
-      type:"text"
-    },
-    {
-      label:"Age",
-      id:"age",
-      model:"age",
-      type:"number"
-    },
-    {
-      label:"Gender",
-      id:"gender",
-      model:"gender",
-      type:"select",
-      values:[{
-        value:"f",
-        label:"Female"
-      },
-      {
-        value:"m",
-        label:"Male"
-      },
-      {
-        value:"o",
-        label:"Other"
-      }]
-    },
-    {
-      label:"Address",
-      id:"address",
-      model:"address",
-      type:"textarea"
-    },
-    {
-      label:"Date of Birth",
-      id:"dob",
-      model:"dob",
-      type:"date"
-    }
-  ]
+
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
